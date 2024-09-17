@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+
+.sub-titulo-app-web {
+    color: var(--Negro, #000);
+
+/* Texto Normal APP WEB */
+font-family: Comme;
+font-size: 14px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+.titulo-app-web-home {
+    color: var(--Schemes-On-Surface, #1D1B20);
+    font-family: "DM Serif Display";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
