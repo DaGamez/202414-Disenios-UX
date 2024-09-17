@@ -44,3 +44,10 @@
     min-height: 300px;
     padding: 20px;
   }
+
+  .home-text-window {
+    width: 350px;
+    height: 300px;
+    flex-shrink: 0;
+    border: 10px solid #FFA500;
+  }
