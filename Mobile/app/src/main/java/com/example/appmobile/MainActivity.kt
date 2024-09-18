@@ -37,144 +37,26 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.appmobile.ui.BackgroundImage
+import com.example.appmobile.ui.ButtonAppPrincipal
+import com.example.appmobile.ui.RoutineCard
+import com.example.appmobile.ui.TusRutinasHeader
+import com.example.appmobile.ui.views.ListadoRutinasScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             AppmobileTheme {
-                Box(modifier = Modifier.fillMaxSize()) {
-
-                BackgroundImage()
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    //modifier = Modifier.fillMaxSize(),
-                    color = Color.Transparent
-                ) {
-                    Column(
-                        modifier = Modifier.fillMaxSize().padding(60.dp),
-                        verticalArrangement = Arrangement.SpaceBetween,
-                        horizontalAlignment = Alignment.CenterHorizontally
-                    ){
-                        TusRutinasHeader()
-                        RoutineCard("Rutina Colegio")
-                        RoutineCard("Estudio Niños")
-                        RoutineCard("Deporte Juanse")
-                        ButtonAppPrincipal()
-                    }
-                }
-
-                }
-
+                ListadoRutinasScreen()
 
             }
         }
     }
 }
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = name,
-        modifier = modifier
-    )
-}
 
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    AppmobileTheme {
-        Greeting("Android")
-    }
-}
 
-@Composable
-fun BackgroundImage() {
-    Image(
-        painter = painterResource(id = R.drawable.background_mobile), // Replace with your image
-        contentDescription = null,
-        contentScale = ContentScale.Crop,
-        modifier = Modifier.fillMaxSize()
-    )
-}
 
-@Composable
-fun ButtonAppPrincipal() {
-    Button(
-        onClick = {},
-        modifier = Modifier
-            .padding(0.dp)
-            .size(width = 269.dp, height = 59.dp),
-        colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF1A661A))
-    ) {
-        Text(text = "Crear Rutina")
-    }
-}
 
-@Composable
-fun RoutineCard(nombre_rutina: String = "Rutina Colegio"){
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .height(100.dp)
-            .background(Color(0xFFFFEB3B))
-            .padding(8.dp),
-        verticalAlignment = Alignment.CenterVertically
-    ) {
-        Box(
-            modifier = Modifier
-                .size(64.dp)
-                .clip(RoundedCornerShape(12.dp))
-                .background(Color.White)
-        ) {
-            Image(
-                painter = painterResource(id = R.drawable.imagen_libros),
-                contentDescription = "Rutina Colegio Icon",
-                modifier = Modifier.size(48.dp).align(Alignment.Center)
-            )
-        }
-
-        Spacer(modifier = Modifier.width(16.dp))
-
-        Column(
-            modifier = Modifier.weight(1f)
-        ) {
-            Text(
-                text = nombre_rutina,
-                fontSize = 18.sp,
-                fontWeight = FontWeight.Bold
-            )
-            Text(
-                text = "Rutina de la mañana niños",
-                fontSize = 14.sp,
-                color = Color.Gray
-            )
-        }
-
-        Icon(
-            imageVector = Icons.Default.PlayArrow,
-            contentDescription = "Play",
-            tint = Color.Black,
-            modifier = Modifier.size(60.dp)
-        )
-    }
-}
-
-@Composable
-fun TusRutinasHeader() {
-    Box(
-        modifier = Modifier
-            .fillMaxWidth()
-            .background(Color(0xFFFFD700)) // Bright yellow background
-            .padding(vertical = 16.dp, horizontal = 24.dp)
-    ) {
-        Text(
-            text = "Tus Rutinas",
-            fontSize = 24.sp,
-            fontWeight = FontWeight.Bold,
-            color = Color.Black,
-            modifier = Modifier.align(Alignment.CenterStart)
-        )
-    }
-}
 
