@@ -148,7 +148,3 @@ body {
     order: 0;
     flex-grow: 0;
 }
-
-a[routerLink] {
-    color: black;
-}
