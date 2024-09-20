@@ -9,6 +9,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.navigation.compose.composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.appmobile.ui.theme.AppmobileTheme
@@ -37,6 +38,9 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.compose.NavHost
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.rememberNavController
 import com.example.appmobile.ui.BackgroundImage
 import com.example.appmobile.ui.ButtonAppPrincipal
 import com.example.appmobile.ui.RoutineCard
@@ -47,10 +51,20 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
+            val navController = rememberNavController()
             AppmobileTheme {
-                ListadoRutinasScreen()
-
+                Navigations(navController)
             }
+        }
+    }
+}
+
+@Composable
+fun Navigations(
+    navController: NavHostController){
+    NavHost(navController, startDestination = "listadoRutinas") {
+        composable("listadoRutinas") {
+            ListadoRutinasScreen()
         }
     }
 }
