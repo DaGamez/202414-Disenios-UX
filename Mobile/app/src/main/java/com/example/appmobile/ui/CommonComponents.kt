@@ -27,8 +27,10 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavHostController
 import com.example.appmobile.R
 
 @Composable
@@ -42,15 +44,15 @@ fun BackgroundImage() {
 }
 
 @Composable
-fun ButtonAppPrincipal() {
+fun ButtonAppPrincipal(text: String="Boton",route: String = "",navigationController:NavHostController) {
     Button(
-        onClick = {},
+        onClick = {navigationController.navigate(route)},
         modifier = Modifier
             .padding(0.dp)
             .size(width = 269.dp, height = 59.dp),
         colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF1A661A))
     ) {
-        Text(text = "Crear Rutina")
+        Text(text = text,fontSize = 18.sp)
     }
 }
 
@@ -104,7 +106,7 @@ fun RoutineCard(nombre_rutina: String = "Rutina Colegio"){
 }
 
 @Composable
-fun TusRutinasHeader() {
+fun ScreenHeader(text : String = "Título") {
     Box(
         modifier = Modifier
             .fillMaxWidth()
@@ -112,11 +114,11 @@ fun TusRutinasHeader() {
             .padding(vertical = 16.dp, horizontal = 24.dp)
     ) {
         Text(
-            text = "Tus Rutinas",
+            text = text,
             fontSize = 24.sp,
             fontWeight = FontWeight.Bold,
             color = Color.Black,
-            modifier = Modifier.align(Alignment.CenterStart)
+            modifier = Modifier.align(Alignment.Center)
         )
     }
 }

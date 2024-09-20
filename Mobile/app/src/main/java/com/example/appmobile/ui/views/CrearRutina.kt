@@ -16,11 +16,10 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.example.appmobile.ui.BackgroundImage
 import com.example.appmobile.ui.ButtonAppPrincipal
-import com.example.appmobile.ui.RoutineCard
 import com.example.appmobile.ui.ScreenHeader
 
 @Composable
-fun ListadoRutinasScreen(navController: NavHostController){
+fun CrearRutinaScreen(navHostController: NavHostController){
     Box(modifier = Modifier.fillMaxSize()) {
 
         BackgroundImage()
@@ -34,11 +33,11 @@ fun ListadoRutinasScreen(navController: NavHostController){
                 verticalArrangement = Arrangement.SpaceBetween,
                 horizontalAlignment = Alignment.CenterHorizontally
             ){
-                ScreenHeader(text="Listado de Rutinas")
-                RoutineCard("Rutina Colegio")
-                RoutineCard("Estudio Niños")
-                RoutineCard("Deporte Juanse")
-                ButtonAppPrincipal(text="Crear Rutina",route="crearRutina",navController)
+                ScreenHeader(text="Crear Rutina")
+                Spacer(modifier = Modifier.height(200.dp))
+                ButtonAppPrincipal(text="Añadir Actividad",route="listadoRutinas",navHostController)
+                ButtonAppPrincipal(text="Cancelar",route="listadoRutinas",navHostController)
+                ButtonAppPrincipal(text="Guardar",route="listadoRutinas",navHostController)
             }
         }
 
