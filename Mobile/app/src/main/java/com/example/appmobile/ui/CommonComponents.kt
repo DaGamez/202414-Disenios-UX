@@ -89,6 +89,7 @@ fun RoutineCard(nombre_rutina: String = "Nombre Rutina",navigationController:Nav
         modifier = Modifier
             .fillMaxWidth()
             .height(100.dp)
+            .clip(RoundedCornerShape(16.dp))
             .background(Color(0xFFFFEB3B))
             .padding(8.dp)
             .clickable { navigationController.navigate("editarRutina") }
@@ -140,6 +141,7 @@ fun ActivityCard(nombre_rutina: String = "Nombre Actividad", description:String=
         modifier = Modifier
             .fillMaxWidth()
             .height(100.dp)
+            .clip(RoundedCornerShape(16.dp))
             .background(Color(0xFFFFEB3B))
             .padding(8.dp)
             .clickable { navigationController.navigate("editarRutina") }
