@@ -2,6 +2,7 @@ package com.example.appmobile.ui
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -57,13 +58,15 @@ fun ButtonAppPrincipal(text: String="Boton",route: String = "",navigationControl
 }
 
 @Composable
-fun RoutineCard(nombre_rutina: String = "Rutina Colegio"){
+fun RoutineCard(nombre_rutina: String = "Nombre Rutina",navigationController:NavHostController){
     Row(
         modifier = Modifier
             .fillMaxWidth()
             .height(100.dp)
             .background(Color(0xFFFFEB3B))
-            .padding(8.dp),
+            .padding(8.dp)
+            .clickable { navigationController.navigate("editarRutina") }
+        ,
         verticalAlignment = Alignment.CenterVertically
     ) {
         Box(

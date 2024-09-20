@@ -10,6 +10,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.example.appmobile.ui.views.CrearRutinaScreen
+import com.example.appmobile.ui.views.EditarRutinaScreen
 import com.example.appmobile.ui.views.ListadoRutinasScreen
 
 class MainActivity : ComponentActivity() {
@@ -33,6 +34,9 @@ fun Navigations(
         }
         composable("crearRutina") {
             CrearRutinaScreen(navController)
+        }
+        composable("editarRutina") {
+            EditarRutinaScreen(navController)
         }
     }
 }
