@@ -58,6 +58,19 @@ fun ButtonAppPrincipal(text: String="Boton",route: String = "",navigationControl
 }
 
 @Composable
+fun ButtonAppSecondary(text: String="Boton",route: String = "",navigationController:NavHostController) {
+    Button(
+        onClick = {navigationController.navigate(route)},
+        modifier = Modifier
+            .padding(0.dp)
+            .size(width = 150.dp, height = 50.dp),
+        colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF1A661A))
+    ) {
+        Text(text = text,fontSize = 16.sp)
+    }
+}
+
+@Composable
 fun smallEditButton(navigationController:NavHostController) {
     Button(
         onClick = {navigationController.navigate("")},
