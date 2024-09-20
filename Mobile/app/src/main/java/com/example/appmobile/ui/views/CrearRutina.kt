@@ -20,7 +20,7 @@ import com.example.appmobile.ui.ButtonAppPrincipal
 import com.example.appmobile.ui.ButtonAppSecondary
 import com.example.appmobile.ui.IntermediateHeader
 import com.example.appmobile.ui.ScreenHeader
-import com.example.appmobile.ui.inputTextApp
+import com.example.appmobile.ui.InputTextApp
 
 @Composable
 fun CrearRutinaScreen(navHostController: NavHostController){
@@ -38,7 +38,7 @@ fun CrearRutinaScreen(navHostController: NavHostController){
                 horizontalAlignment = Alignment.CenterHorizontally
             ){
                 ScreenHeader(text="Crear Rutina")
-                inputTextApp(value="Colegio Niños",label="Nombre de la Rutina")
+                InputTextApp(value="Colegio Niños",label="Nombre de la Rutina")
                 IntermediateHeader(text="Actividades de tu Rutina")
                 ActivityCard(nombre_rutina="Bañarse",description="Inicio y Duracion",navHostController)
                 ActivityCard(nombre_rutina="Desayunar",description="Inicio y Duracion",navHostController)
