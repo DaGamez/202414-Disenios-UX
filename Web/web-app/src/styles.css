@@ -19,3 +19,13 @@ line-height: normal;
     font-weight: 400;
     line-height: normal;
 }
+
+.button-transparent {
+    background-color: transparent; /* Transparent background */
+    color: white; /* Text color */
+    border: none; /* No border */
+    padding: 10px 20px; /* Padding */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    text-align: center; /* Center text */
+  }
