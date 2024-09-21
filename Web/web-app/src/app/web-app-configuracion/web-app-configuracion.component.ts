@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./web-app-configuracion.component.css']
 })
 export class WebAppConfiguracionComponent implements OnInit {
-
+  selectedCountry: string = '';
   mostrarMenuPais:Boolean = false;
   diasFestivosCostaRica: Array<String>=["Año Nuevo: lunes 1 de enero","Jueves Santo: 28 de marzo"];
 

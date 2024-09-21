@@ -22,12 +22,13 @@
             </p>
             <mat-form-field>
               <mat-label>Seleccione su país</mat-label>
-              <mat-select>
-                <mat-option>Costa Rica</mat-option>
-                <mat-option >Colombia</mat-option>
+              <mat-select [(ngModel)]="selectedCountry">
+                <mat-option >Ninguno</mat-option>
+                <mat-option value="Costa Rica">Costa Rica</mat-option>
+                <mat-option value="Colombia">Colombia</mat-option>
               </mat-select>
             </mat-form-field>
-
+            <p>Selected country: {{ selectedCountry }}</p>
             <table class="table">
               <thead>
                 <tr>
