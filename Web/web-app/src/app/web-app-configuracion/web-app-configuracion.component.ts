@@ -9,10 +9,20 @@ export class WebAppConfiguracionComponent implements OnInit {
   selectedCountry: string = '';
   mostrarMenuPais:Boolean = false;
   diasFestivosCostaRica: Array<String>=["Año Nuevo: lunes 1 de enero","Jueves Santo: 28 de marzo"];
+  diasFestivosColombia: Array<String>=["Navidad 25 de diciembre","Año Nuevo 1 de enero"];
+  diasFestivosSeleccionados: Array<String>=[];
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  actualizardiasFestivos(){
+    if(this.selectedCountry == 'Costa Rica'){
+      this.diasFestivosSeleccionados = this.diasFestivosCostaRica;
+    }else if(this.selectedCountry == 'Colombia'){
+      this.diasFestivosSeleccionados = this.diasFestivosColombia;
+    }
   }
 
 }
