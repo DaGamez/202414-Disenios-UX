@@ -29,3 +29,5 @@ line-height: normal;
     cursor: pointer; /* Pointer cursor on hover */
     text-align: center; /* Center text */
   }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
