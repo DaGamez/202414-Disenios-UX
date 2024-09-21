@@ -8,6 +8,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';  // No need t
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
+import {RouterModule} from '@angular/router';
 
 @NgModule({
   imports: [
@@ -19,7 +20,8 @@ import {MatButtonModule} from '@angular/material/button';
     ReactiveFormsModule,
     MatCheckboxModule,
     BrowserAnimationsModule,
-    MatButtonModule
+    MatButtonModule,
+    RouterModule
   ],
   declarations: [WebAppConfiguracionComponent]
 })
