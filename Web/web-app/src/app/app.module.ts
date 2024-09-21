@@ -9,12 +9,14 @@ import { ReestablecerContraseniaComponent } from './reestablecer-contrasenia/ree
 import { OlvidoContraseniaComponent } from './olvido-contrasenia/olvido-contrasenia.component';
 import {WebAppConfiguracionComponent} from './web-app-configuracion/web-app-configuracion.component';
 import { WebAppConfiguracionModule } from './web-app-configuracion/web-app-configuracion.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const routes: Routes = [
   { path: '', component: LoginComponent, pathMatch: 'full' },
   { path: 'home', component: WebAppHomeComponent },
   { path: 'olvido-contrasenia', component: OlvidoContraseniaComponent },
-  {path: 'configuracion', component: WebAppConfiguracionComponent}
+  { path: 'configuracion', component: WebAppConfiguracionComponent},
+  { path: 'reestablecer-contrasenia', component: ReestablecerContraseniaComponent }
   // other routes...
 ];
 
@@ -29,7 +31,8 @@ const routes: Routes = [
     BrowserModule,
     RouterModule.forRoot(routes),
     WebAppHomeModule,
-    WebAppConfiguracionModule
+    WebAppConfiguracionModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
