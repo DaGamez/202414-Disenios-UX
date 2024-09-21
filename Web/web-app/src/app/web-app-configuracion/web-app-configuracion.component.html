@@ -28,6 +28,24 @@
               </mat-select>
             </mat-form-field>
 
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col" class="text-center"></th>
+                  <th scope="col" class="text-center">Festivo</th>
+                  <th scope="col" class="text-center">Mantener Alarma</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let dia of diasFestivosCostaRica">
+                  <td class="text-center justify-content-center circle">1</td>
+                  <td class="text-center align-items-center">{{ dia }}</td>
+                  <td class="text-center"><input class="form-check-input" type="checkbox" id="exampleCheck1" checked></td>
+
+                </tr>
+              </tbody>
+            </table>
+
 
             
         </div>

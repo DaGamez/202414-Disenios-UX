@@ -66,4 +66,42 @@
     box-shadow: none;
   }
 
-  
+  /* Remove borders from the table */
+.table {
+  border-collapse: collapse; /* Ensure borders are collapsed */
+}
+
+/* Remove borders from table rows */
+.table th, 
+.table td {
+  border: none; /* Remove borders from header and cells */
+}
+
+.special-row {
+  margin-bottom: 100 px; /* Uncomment this line if you want space between rows */
+}
+
+.table td {
+  padding: 15px; /* Adjust padding as needed */
+}
+
+.form-check-input:checked {
+  background-color: black; /* Checkbox background when checked */
+  border-color: white; /* Checkbox border when checked */
+}
+.form-check-input {
+  background-color: black; /* Checkbox background when unchecked */
+  border: 1px solid white; /* Checkbox border color */
+}
+
+.circle {
+  display: inline-flex; /* Use inline-flex for centering */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  width: 40px; /* Set width for the circle */
+  height: 40px; /* Set height for the circle */
+  border-radius: 50%; /* Make it a circle */
+  background-color: grey; /* Circle background color */
+  color: black; /* Text color */
+  font-weight: bold; /* Text weight */
+}
