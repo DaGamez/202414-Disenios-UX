@@ -28,7 +28,8 @@
                 <mat-option value="Colombia">Colombia</mat-option>
               </mat-select>
             </mat-form-field>
-            <p>Selected country: {{ selectedCountry }}</p>
+            <div *ngIf="selectedCountry === 'Costa Rica'">
+            
             <table class="table">
               <thead>
                 <tr>
@@ -46,6 +47,8 @@
                 </tr>
               </tbody>
             </table>
+
+            </div>
 
 
             
