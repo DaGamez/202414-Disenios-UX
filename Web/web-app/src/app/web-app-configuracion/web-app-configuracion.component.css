@@ -21,6 +21,14 @@
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   }
 
+  .button-location{
+    position: absolute;
+    top: 92%;
+    right: 23%;
+    background-color: #FFA500;
+    border-color: #FFA500;
+  }
+
   .header {
     background-color: #FFA500;
     color: white;
