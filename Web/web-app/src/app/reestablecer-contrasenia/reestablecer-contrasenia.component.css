@@ -47,11 +47,11 @@ body {
 .button-group {
     display: flex;
     flex-direction: row; /* Aligns children in a row */
-    justify-content: space-between; /* Adds space between the buttons */
+    justify-content: right; /* Adds space between the buttons */
+    margin-right: 25px;
 }
 
 .button {
-    margin-right: 10px;
     background: #1A661A;
     color: #FFFFFF;
     font-family: 'Comme';
@@ -135,16 +135,22 @@ body {
     border: none
 }
 
+
 .text {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     padding: 8px;
     isolation: isolate;
-    width: 310px;
+    width: auto;
     height: 48px;
     border-radius: 4px 4px 0px 0px;
-    flex: none;
     order: 0;
     flex-grow: 0;
+    color: #FFFFFF;
+    font-family: 'Comme';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
 }
