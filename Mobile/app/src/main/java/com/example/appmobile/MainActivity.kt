@@ -12,6 +12,9 @@ import androidx.navigation.compose.rememberNavController
 import com.example.appmobile.ui.views.CrearRutinaScreen
 import com.example.appmobile.ui.views.EditarRutinaScreen
 import com.example.appmobile.ui.views.ListadoRutinasScreen
+import com.example.appmobile.ui.views.EditarActividadScreen
+import com.example.appmobile.ui.views.NuevaActividadScreen
+import com.example.appmobile.ui.views.ImagenActividadScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,6 +40,15 @@ fun Navigations(
         }
         composable("editarRutina") {
             EditarRutinaScreen(navController)
+        }
+        composable("editarActividad") {
+            EditarActividadScreen(navController)
+        }
+        composable("nuevaActividad") {
+            NuevaActividadScreen(navController)
+        }
+        composable("imagenActividad"){
+            ImagenActividadScreen(navController)
         }
     }
 }
