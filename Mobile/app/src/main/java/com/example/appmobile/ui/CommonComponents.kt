@@ -82,7 +82,7 @@ fun ButtonAppSecondary(text: String="Boton",route: String = "",navigationControl
 @Composable
 fun smallEditButton(navigationController:NavHostController) {
     Button(
-        onClick = {navigationController.navigate("")},
+        onClick = {navigationController.navigate("editarActividad")},
         modifier = Modifier
             .padding(0.dp)
             .size(width = 80.dp, height = 40.dp),
@@ -153,7 +153,7 @@ fun ActivityCard(nombre_rutina: String = "Nombre Actividad", description:String=
             .clip(RoundedCornerShape(16.dp))
             .background(Color(0xFFFFEB3B))
             .padding(8.dp)
-            .clickable { navigationController.navigate("editarActividad") }
+            .clickable { navigationController.navigate("editarRutina") }
         ,
         verticalAlignment = Alignment.CenterVertically
     ) {
