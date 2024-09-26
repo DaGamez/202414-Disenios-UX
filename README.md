@@ -1,12 +1,9 @@
 # 202414-Disenios-UX
 
-pasos
+En este repositorio encontrará dos carpetas. 
 
-sobre la carpeta web-app correr comando
+* Mobile: proyecto de android studio basado en jetpack compose con las 6 pantallas mobile que definimos para trabajar.
 
-npm install
+* Web: proyecto en angular con las 6 pantallas web que decidimos trabajar.
 
-instalar los siguientes 
-
-npm install bootstrap
-npm install @popperjs/core
+Dentro de cada carpeta va a encontrar el README respectivo con las instrucciones para correr los proyectos web y mobiel.
