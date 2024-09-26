@@ -17,6 +17,8 @@
 
   .central-window-container {
     padding-top: 5%;
+    width: 59%;
+    margin: 0 auto;
   }
 
   .button-guardar{
@@ -55,12 +57,6 @@
     padding: 20px;
   }
 
-  .home-text-window {
-    width: 350px;
-    height: 300px;
-    flex-shrink: 0;
-    border: 10px solid #FFA500;
-  }
 
   .container {
     min-height: auto;
