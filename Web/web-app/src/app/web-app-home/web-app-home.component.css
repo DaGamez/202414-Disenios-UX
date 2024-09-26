@@ -41,20 +41,52 @@
 
   .right-image {
     width: 100%;
-    height: auto;
-    flex-shrink: 0;
+    height: 100%;    /* Maintain the aspect ratio */
+    padding:0px;
+    object-fit: cover;
+
+  }
+
+  .image-container {
+    background-image: url('/../../assets/Panel derecho web home.png');
+    background-size: cover;        /* Makes the background image cover the entire container */
+    background-position: center;   /* Center the image within the container */
+    background-repeat: no-repeat;  /* Prevent the image from repeating */
+    width: 100%;                   /* Full width of the parent column */
+    height: 0;                     /* Necessary to create space for the image */
+    padding-bottom: 80%;        /* Sets the aspect ratio. 56.25% is 16:9 ratio */
+    position: relative;            /* So that it scales responsively */
+    
+  }
+
+  .aspect-ratio-box {
+    aspect-ratio: 16 / 5; /* Define the desired aspect ratio (e.g., 16:9) */
   }
 
   .content {
     background-color: white;
-    padding: 20px;
+    padding: 0px;
   }
 
   .home-text-window {
-    width: 80%;
+    width: 98%;
     height: auto;
     flex-shrink: 0;
     border: 10px solid #FFA500;
+  }
+
+  .home-text-window-container {
+    padding-top: 30%;
+    display: flex;
+    justify-content: center;
+  }
+
+  col.no-padding{
+    padding: 0px;
+  }
+
+  row.no-padding{
+    padding: 0px;
   }
 
   .container {
