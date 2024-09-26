@@ -15,6 +15,10 @@
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   }
 
+  .central-window-container {
+    padding-top: 5%;
+  }
+
   .button-guardar{
     background-color: #FFA500;
     border-color: #FFA500;

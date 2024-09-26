@@ -1,58 +1,57 @@
 
-<br>
-<br>
-<br>
-<div class="container">
-  <div class="row">
-    <div class="col-12">
-      <div class="central-window">
-        <div class="header">
-          <div class="header-left">
-            <span class="icon">⏱️</span>
-            <span><button class="button-transparent">Mis Rutinas</button></span>
+<div class="central-window-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="central-window">
+          <div class="header">
+            <div class="header-left">
+              <span class="icon">⏱️</span>
+              <span><button class="button-transparent">Mis Rutinas</button></span>
+            </div>
+            <div class="header-right">
+              <span class="icon">⚙️</span>
+              <span><button class="button-transparent">Configuración</button></span>
+            </div>
           </div>
-          <div class="header-right">
-            <span class="icon">⚙️</span>
-            <span><button class="button-transparent">Configuración</button></span>
-          </div>
-        </div>
-        <div class="content">
-          <div class="container">
-            <div class="row">
-              <div class="col-12">
-                <p>
-                  Hola, aquí puedes elegir si quieres que la alarma suene incluso en días festivos.
-                </p>
-                <p>
-                  Por favor, selecciona tu país de residencia
-                </p>
-                <mat-form-field appearance="outline" class="custom-form-field">
-                  <mat-label>Seleccione su país</mat-label>
-                  <mat-select [(ngModel)]="selectedCountry" (selectionChange)="actualizardiasFestivos()">
-                    <mat-option>Ninguno</mat-option>
-                    <mat-option value="Costa Rica">Costa Rica</mat-option>
-                    <mat-option value="Colombia">Colombia</mat-option>
-                  </mat-select>
-                </mat-form-field>
-                <div *ngIf="selectedCountry">
-                  <table class="table">
-                    <thead>
-                      <tr>
-                        <th scope="col" class="text-center"></th>
-                        <th scope="col" class="text-center">Días Festivos</th>
-                        <th scope="col" class="text-center">Mantener Alarma</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr *ngFor="let dia of diasFestivosSeleccionados; let i = index">
-                        <td class="text-center justify-content-center circle">{{i+1}}</td>
-                        <td class="text-center align-items-center">{{ dia }}</td>
-                        <td class="text-center">
-                          <input class="form-check-input" type="checkbox" id="exampleCheck1" checked>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+          <div class="content">
+            <div class="container">
+              <div class="row">
+                <div class="col-12">
+                  <p>
+                    Hola, aquí puedes elegir si quieres que la alarma suene incluso en días festivos.
+                  </p>
+                  <p>
+                    Por favor, selecciona tu país de residencia
+                  </p>
+                  <mat-form-field appearance="outline" class="custom-form-field">
+                    <mat-label>Seleccione su país</mat-label>
+                    <mat-select [(ngModel)]="selectedCountry" (selectionChange)="actualizardiasFestivos()">
+                      <mat-option>Ninguno</mat-option>
+                      <mat-option value="Costa Rica">Costa Rica</mat-option>
+                      <mat-option value="Colombia">Colombia</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                  <div *ngIf="selectedCountry">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th scope="col" class="text-center"></th>
+                          <th scope="col" class="text-center">Días Festivos</th>
+                          <th scope="col" class="text-center">Mantener Alarma</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let dia of diasFestivosSeleccionados; let i = index">
+                          <td class="text-center justify-content-center circle">{{i+1}}</td>
+                          <td class="text-center align-items-center">{{ dia }}</td>
+                          <td class="text-center">
+                            <input class="form-check-input" type="checkbox" id="exampleCheck1" checked>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </div>
             </div>
@@ -60,13 +59,13 @@
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="row">
-    <div class="col-12">
-      <div *ngIf="selectedCountry" >
-        <div class="button-container">
-          <button class="btn btn-primary button-guardar" routerLink="/home">Guardar</button>
+    <div class="row">
+      <div class="col-12">
+        <div *ngIf="selectedCountry" >
+          <div class="button-container">
+            <button class="btn btn-primary button-guardar" routerLink="/home">Guardar</button>
+          </div>
         </div>
       </div>
     </div>
