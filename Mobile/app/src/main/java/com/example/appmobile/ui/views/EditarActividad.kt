@@ -19,6 +19,7 @@ import androidx.navigation.NavHostController
 import com.example.appmobile.ui.BackgroundImage
 import com.example.appmobile.ui.ButtonAppPrincipal
 import com.example.appmobile.ui.ButtonAppSecondary
+import com.example.appmobile.ui.ButtonAppTerciario
 import com.example.appmobile.ui.ImagenLibros
 import com.example.appmobile.ui.InicioActividadCard
 import com.example.appmobile.ui.InputTextApp
@@ -52,9 +53,9 @@ fun EditarActividadScreen(navHostController: NavHostController){
                     verticalAlignment=Alignment.CenterVertically
 
                 ){
-                    ButtonAppSecondary(text="Cancelar",route="listadoRutinas",navHostController)
-                    ButtonAppSecondary(text="Guardar",route="listadoRutinas",navHostController)
-                    ButtonAppSecondary(text="Eliminar",route="listadoRutinas",navHostController)
+                    ButtonAppTerciario(text="Cancelar",route="listadoRutinas",navHostController)
+                    ButtonAppTerciario(text="Guardar",route="listadoRutinas",navHostController)
+                    ButtonAppTerciario(text="Eliminar",route="listadoRutinas",navHostController)
                 }
             }
         }

@@ -32,6 +32,8 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.drawBehind
+import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
@@ -80,6 +82,19 @@ fun ButtonAppSecondary(text: String="Boton",route: String = "",navigationControl
 }
 
 @Composable
+fun ButtonAppTerciario(text: String="Boton",route: String = "",navigationController:NavHostController) {
+    Button(
+        onClick = {navigationController.navigate(route)},
+        modifier = Modifier
+            .padding(0.dp)
+            .size(width = 108.dp, height = 50.dp),
+        colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF1A661A))
+    ) {
+        Text(text = text,fontSize = 14.sp)
+    }
+}
+
+@Composable
 fun smallEditButton(navigationController:NavHostController) {
     Button(
         onClick = {navigationController.navigate("editarActividad")},
@@ -109,12 +124,11 @@ fun RoutineCard(nombre_rutina: String = "Nombre Rutina",navigationController:Nav
             modifier = Modifier
                 .size(64.dp)
                 .clip(RoundedCornerShape(12.dp))
-                .background(Color.White)
         ) {
             Image(
                 painter = painterResource(id = R.drawable.imagen_libros),
                 contentDescription = "Rutina Colegio Icon",
-                modifier = Modifier.size(48.dp).align(Alignment.Center)
+                modifier = Modifier.size(60.dp).align(Alignment.Center)
             )
         }
 
@@ -161,12 +175,11 @@ fun ActivityCard(nombre_rutina: String = "Nombre Actividad", description:String=
             modifier = Modifier
                 .size(64.dp)
                 .clip(RoundedCornerShape(12.dp))
-                .background(Color.White)
         ) {
             Image(
                 painter = painterResource(id = R.drawable.imagen_libros),
                 contentDescription = "imagenLibrosIcon",
-                modifier = Modifier.size(48.dp).align(Alignment.Center)
+                modifier = Modifier.size(60.dp).align(Alignment.Center)
             )
         }
 
@@ -196,9 +209,34 @@ fun ActivityCard(nombre_rutina: String = "Nombre Actividad", description:String=
 fun ScreenHeader(text : String = "Título") {
     Box(
         modifier = Modifier
+            .drawBehind {
+                // Draw a border only on the bottom and left sides
+                val strokeWidth = 20.dp.toPx() // Adjust border thickness
+                val halfStrokeWidth = strokeWidth / 2
+                val topOffset = halfStrokeWidth
+                val leftOffset = halfStrokeWidth
+                val bottomOffset = size.height - halfStrokeWidth
+                val rightOffset = size.width - halfStrokeWidth
+
+                // Draw the left border
+                drawLine(
+                    color = Color(0xFFFFA500), // Left border color
+                    start = Offset(x = 0f, y = 0f),
+                    end = Offset(x = 0f, y = size.height+halfStrokeWidth),
+                    strokeWidth = strokeWidth
+                )
+                // Draw the bottom border
+                drawLine(
+                    color = Color(0xFFFFA500), // Bottom border color
+                    start = Offset(x = 0f, y = size.height),
+                    end = Offset(x = size.width, y = size.height),
+                    strokeWidth = strokeWidth
+                )
+            }
             .fillMaxWidth()
             .background(Color(0xFFFFD700)) // Bright yellow background
             .padding(vertical = 16.dp, horizontal = 24.dp)
+
     ) {
         Text(
             text = text,
@@ -215,9 +253,12 @@ fun IntermediateHeader(text : String = "Título Intermedio") {
     Box(
         modifier = Modifier
             .fillMaxWidth()
+            .clip(RoundedCornerShape(20.dp))
             .background(Color(0xFFFFD700)) // Bright yellow background
             .padding(vertical = 4.dp, horizontal = 24.dp)
             .height(30.dp)
+
+
     ) {
         Text(
             text = text,
@@ -234,9 +275,15 @@ fun InputTextApp(value: String = "Input Text", label: String = "Label Text") {
     TextField(
         value = value,
         onValueChange = {},
-        label = { Text(label) },
+        label = { Text(label,
+                        fontWeight = FontWeight.Bold,
+                        color=Color.Black,
+                        fontSize = 16.sp
+                      )
+                },
         modifier = Modifier.fillMaxWidth(),
         colors = OutlinedTextFieldDefaults.colors( unfocusedContainerColor = Color(0xFF32CD32), focusedContainerColor = Color(0xFF32CD32)  )
+
     )
 }
 

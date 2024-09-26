@@ -48,7 +48,7 @@ fun ImagenActividadScreen(navController: NavHostController){
 //                SeleccionarImagenActividad(text="Imagen")
                 LazyVerticalGrid(
                     columns = GridCells.Fixed(2), // 2 columns
-                    contentPadding = PaddingValues(8.dp), // Padding around the grid
+                    contentPadding = PaddingValues(0.dp), // Padding around the grid
                     modifier = Modifier.fillMaxWidth(),
                     verticalArrangement = Arrangement.spacedBy(8.dp), // Space between rows
                     horizontalArrangement = Arrangement.spacedBy(8.dp), // Space between columns
