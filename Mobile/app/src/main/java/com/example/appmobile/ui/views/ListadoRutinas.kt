@@ -34,7 +34,7 @@ fun ListadoRutinasScreen(navController: NavHostController){
                 verticalArrangement = Arrangement.SpaceBetween,
                 horizontalAlignment = Alignment.CenterHorizontally
             ){
-                ScreenHeader(text="Listado de Rutinas")
+                ScreenHeader(text="Tus Rutinas")
                 RoutineCard("Rutina Colegio",navController)
                 RoutineCard("Estudio Niños",navController)
                 RoutineCard("Deporte Juanse",navController)

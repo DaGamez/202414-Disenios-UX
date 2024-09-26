@@ -37,7 +37,7 @@ fun CrearRutinaScreen(navHostController: NavHostController){
                 verticalArrangement = Arrangement.SpaceBetween,
                 horizontalAlignment = Alignment.CenterHorizontally
             ){
-                ScreenHeader(text="Crear Rutina")
+                ScreenHeader(text="Crea tu Rutina")
                 InputTextApp(value="Colegio Niños",label="Nombre de la Rutina")
                 IntermediateHeader(text="Actividades de tu Rutina")
                 ActivityCard(nombre_rutina="Bañarse",description="Inicio y Duracion",navHostController)
